@@ -16,14 +16,13 @@ export function getRouter() {
     createRouter({
       routeTree,
       defaultPreload: 'intent',
-      context: { queryClient },
-      scrollRestoration: true,
-      defaultPreloadStaleTime: 0,
-      defaultErrorComponent: (err) => <p>{err.error?.message || 'Error'}</p>,
-      defaultNotFoundComponent: () => <p>not found</p>,
-    }),
-    queryClient,
-  )
+    scrollRestoration: true,
+    defaultPreloadStaleTime: 0,
+    defaultErrorComponent: (err) => <p>{err.error?.message || 'Error'}</p>,
+    defaultNotFoundComponent: () => <p>not found</p>,
+  }),
+  queryClient,
+)
 
   return router
 }
